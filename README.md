@@ -72,3 +72,19 @@ If all entered numbers are negative, initializing both values to zero could inco
 ### How do you distinguish an empty series from a series containing zero?
 
 The Boolean variable has_data tracks whether a valid number was entered. If it remains false, the series is empty. If zero is entered, has_data becomes true, so zero is treated as valid data.
+## 5. Final Code Verification
+
+After revising the variable initialization, I tested the final version of `min_max.cpp` again using OnlineGDB with C++17.
+
+All six tests were rerun successfully:
+
+- Positive numbers: PASS
+- Negative numbers: PASS
+- Single-value series: PASS
+- Repeated zeros: PASS
+- Empty series: PASS
+- Additional mixed-value series: PASS
+
+The revised program initializes `smallest` and `largest` using the first valid number instead of assigning them initial zero values. The empty-series test also confirmed that the program does not access or display uninitialized extrema.
+
+The final test results matched the expected results in all six cases.
